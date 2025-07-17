@@ -20,6 +20,7 @@ app.use ( express.json() );
 
 //rutas
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/events', require('./routes/events'));
 //todo lo que exporte el require, se va a habilitar en /api/auth
 // app.get('/', (req, res) => {
 

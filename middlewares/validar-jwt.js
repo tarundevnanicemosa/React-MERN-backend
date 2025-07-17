@@ -35,6 +35,6 @@ const validarJWT = (req, res = response, next) => {
 
 }
 
-module.export = {
+module.exports = {
     validarJWT
 }
