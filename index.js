@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const { dbConnection } = require('./database/config');
 require('dotenv').config();
@@ -28,7 +29,9 @@ app.use('/api/events', require('./routes/events'));
 //         ok:true
 //     })
 // })
-
+app.use('*', (req, res) => {
+    res.sendFile( path.json(__dirname, 'public/index.html'));
+})
 
 //escuchar peticiones
 app.listen( process.env.PORT, () => {
